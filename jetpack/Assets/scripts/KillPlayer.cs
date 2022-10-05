@@ -5,6 +5,8 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject Player;
+    private bool dead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,10 @@ public class KillPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (dead)
+        {
+            Destroy(Player);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,6 +27,7 @@ public class KillPlayer : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canvas.SetActive(true);
+            dead = true;
         }
     }
 }
