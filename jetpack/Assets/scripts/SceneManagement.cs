@@ -21,6 +21,6 @@ public class SceneManagement : MonoBehaviour
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(respawn);
+        SceneManager.LoadScene("SampleScene");
     }
 }
