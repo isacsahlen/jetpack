@@ -65,7 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: df435aea76951c9449442bb17dd95c67, type: 3}
       propertyPath: m_Name
-      value: ObstacleBlock
+      value: ObstacleBlock Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df435aea76951c9449442bb17dd95c67, type: 3}
+      propertyPath: m_TagString
+      value: box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df435aea76951c9449442bb17dd95c67, type: 3}
@@ -87,17 +91,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.009999999, y: 0.01, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3903044327254879802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6336481073972929091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f36afd88af5fab4eb2cf46714f94ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  Player: {fileID: 0}
