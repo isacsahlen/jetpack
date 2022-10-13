@@ -16,9 +16,10 @@ public class KillPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dead)
+        if (dead == true)
         {
             Destroy(Player);
+            canvas.SetActive(true);
         }
     }
 
@@ -26,7 +27,6 @@ public class KillPlayer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            canvas.SetActive(true);
             dead = true;
         }
     }
