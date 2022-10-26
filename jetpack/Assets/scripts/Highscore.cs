@@ -20,8 +20,9 @@ public class Highscore : MonoBehaviour
     {
         score.text = (int)number + " Score";
         
-        if(kp.dead)
+        if(kp.dead == true)
         {
+            
             Debug.Log("hej");
         }
         else

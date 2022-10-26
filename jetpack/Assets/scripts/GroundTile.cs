@@ -11,8 +11,14 @@ public class GroundTile : MonoBehaviour
     {
         groundSpawner = FindObjectOfType<GroundSpawner>();
         int rd = Random.Range(1, 3);
-        if(rd == 1)
+        if (rd == 1)
+        {
             SpawnObstacle();
+        }
+        else if(rd <= 2)
+        { 
+            SpawnFuel();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -34,5 +40,16 @@ public class GroundTile : MonoBehaviour
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
         Instantiate(obstiaclePrefab, spawnPoint.position, Quaternion.identity, transform);
+    }
+
+
+    public GameObject FuelPrefab;
+
+    void SpawnFuel()
+    {
+        int obstacleSpawnIndex = Random.Range(2, 5);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+
+        Instantiate(FuelPrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 }
