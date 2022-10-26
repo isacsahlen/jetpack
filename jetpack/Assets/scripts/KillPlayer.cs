@@ -6,7 +6,7 @@ public class KillPlayer : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject Player;
-    private bool dead = false;
+    public bool dead = false;
     // Start is called before the first frame update
     
     private void Awake()

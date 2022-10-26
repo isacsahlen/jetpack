@@ -9,6 +9,8 @@ public class Highscore : MonoBehaviour
     public float number;
     public float numberPerSecond;
 
+    KillPlayer kp = new KillPlayer();
+
     void start()
     {
         number = 0f;
@@ -17,8 +19,16 @@ public class Highscore : MonoBehaviour
     void Update()
     {
         score.text = (int)number + " Score";
-
-        number += numberPerSecond * Time.deltaTime;
+        
+        if(kp.dead)
+        {
+            Debug.Log("hej");
+        }
+        else
+        {
+            number += numberPerSecond * Time.deltaTime;
+        }
+            
 
     }
     

@@ -1,13 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundTile : MonoBehaviour
 {
     GroundSpawner groundSpawner;
     
+    
     void Start()
     {
         groundSpawner = FindObjectOfType<GroundSpawner>();
-        SpawnObstacle();
+        int rd = Random.Range(1, 3);
+        if(rd == 1)
+            SpawnObstacle();
     }
 
     private void OnTriggerExit(Collider other)
@@ -25,7 +30,7 @@ public class GroundTile : MonoBehaviour
 
     void SpawnObstacle()
     {
-        int obstacleSpawnIndex = Random.Range(2, 3);
+        int obstacleSpawnIndex = Random.Range(2, 5);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
         Instantiate(obstiaclePrefab, spawnPoint.position, Quaternion.identity, transform);
