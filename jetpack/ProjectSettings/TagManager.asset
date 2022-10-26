@@ -6,6 +6,7 @@ TagManager:
   tags:
   - canvas
   - box
+  - Fuel
   layers:
   - Default
   - TransparentFX
