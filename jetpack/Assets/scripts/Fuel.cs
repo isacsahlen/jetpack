@@ -11,8 +11,12 @@ public class Fuel : MonoBehaviour
     public float numberPerSecond;
     public GameObject fuel;
 
+    public GameObject canvas;
+    public GameObject Player;
+
     KillPlayer kp = new KillPlayer();
 
+    
     void Start()
     {
         number = 100f;
@@ -22,11 +26,14 @@ public class Fuel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         score.text = (int)number + " Fuel"+"%";
 
-        if (kp.dead)
+        if (number <= 0)
         {
-            Debug.Log("hej");
+            Destroy(Player);
+            canvas.SetActive(true);
         }
         else
         {
@@ -38,7 +45,7 @@ public class Fuel : MonoBehaviour
         if (other.gameObject.CompareTag("Fuel"))
         {
             number = 100f;
-            Destroy(fuel);
+            other.gameObject.SetActive(false);
         }
     }
 }

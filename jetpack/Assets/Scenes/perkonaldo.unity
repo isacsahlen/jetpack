@@ -828,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   groundDrag: 0
-  jumpForce: 6
+  jumpForce: 1
   jumpCooldown: 0
   airMultiplier: 0
   walkSpeed: 0
@@ -947,6 +947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1574910521}
   Player: {fileID: 1230406077}
+  Fuel: {fileID: 0}
   dead: 0
 --- !u!114 &1230406085
 MonoBehaviour:
@@ -964,6 +965,8 @@ MonoBehaviour:
   number: 100
   numberPerSecond: 5
   fuel: {fileID: 2114859662}
+  canvas: {fileID: 1574910521}
+  Player: {fileID: 1230406077}
 --- !u!1 &1245339874
 GameObject:
   m_ObjectHideFlags: 0

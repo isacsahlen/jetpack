@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstiaclePrefab: {fileID: 6336481073972929091, guid: ad692bc2f1099754bbdc64fdac84975c, type: 3}
+  FuelPrefab: {fileID: 7371773882176598145, guid: 23ce3c265e6b952479ca9bbfe171309e, type: 3}
 --- !u!1 &6865325563946059744
 GameObject:
   m_ObjectHideFlags: 0
