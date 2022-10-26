@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a68074fcf736f469fcdfbe2ea43096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 919132149155446097, guid: 62b8a4f5b82b020418342b07a21a468b, type: 3}
+  groundTile: {fileID: 6616292982488907625, guid: c3ca481706f68ba4c918a59ff1242cf8, type: 3}
 --- !u!4 &682905543
 Transform:
   m_ObjectHideFlags: 0
@@ -828,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   groundDrag: 0
-  jumpForce: 6
+  jumpForce: 1
   jumpCooldown: 0
   airMultiplier: 0
   walkSpeed: 0
