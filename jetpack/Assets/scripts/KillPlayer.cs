@@ -8,31 +8,25 @@ public class KillPlayer : MonoBehaviour
     public GameObject Player;
     public bool dead = false;
     // Start is called before the first frame update
-    
-    private void Awake()
-    {
-        
-    }
     void Start()
     {
-        canvas.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (dead)
+        if (dead == true)
         {
             Destroy(Player);
-            
+            canvas.SetActive(true);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("box"))
+        if (other.CompareTag("Player"))
         {
-            canvas.SetActive(true);
             dead = true;
         }
     }
