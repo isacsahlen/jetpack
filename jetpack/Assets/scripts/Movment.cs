@@ -34,6 +34,8 @@ public class Movment : MonoBehaviour
 
     Rigidbody rb;
 
+     
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -54,6 +56,11 @@ public class Movment : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+        // clamp movment
+        var pos = transform.position;
+        pos.y = Mathf.Clamp(transform.position.y, 0.5f, 12.0f);
+        transform.position = pos;
+
     }
 
     private void FixedUpdate()
